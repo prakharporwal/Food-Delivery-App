@@ -1,12 +1,11 @@
-import React from "react";
-import { RCButton } from "../Components/Button";
+import { NavBar } from "../Components/NavBar";
 import "./MainPage.css";
 
 export default function MainPage() {
   return (
     <>
       <div className="main-app">Work In Progress</div>
-      <RCButton>Connect Now</RCButton>
+      <NavBar></NavBar>
     </>
   );
 }
