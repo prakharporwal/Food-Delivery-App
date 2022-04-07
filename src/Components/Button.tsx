@@ -1,35 +1,47 @@
 import React from "react";
-import HamBurgerIcon from "../assets/hamburger.png";
 import "./Button.css";
 
 interface RCButtonProps {
   title?: string;
-  children?: any;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const RCButton = (props: RCButtonProps) => {
-  return <button className="rc-button">{props.title}</button>;
+const RCButton: React.FunctionComponent<any> = (props: RCButtonProps) => {
+  return (
+    <button
+      title={props.title}
+      className={`rc-button ${props.className}`}
+      onClick={props.onClick}
+    >
+      {props.title}
+    </button>
+  );
 };
 
-interface RCButtonSecondaryProps {
+interface RCSecondaryButtonProps {
   title?: string;
-  children?: any;
+  children: any;
 }
 
-const RCButtonSecondary: React.FunctionComponent<{}> = (
-  props: RCButtonSecondaryProps
+const RCSecondaryButton: React.FunctionComponent<RCSecondaryButtonProps> = (
+  props
 ) => {
   return <button className="rc-button--secondary">{props.children}</button>;
 };
 
-const IconButton: React.FunctionComponent<{}> = (props) => {
+interface IconButtonProps {
+  alt?: string;
+}
+
+const IconButton: React.FunctionComponent<IconButtonProps> = (props) => {
   return (
-    <button>
-      <div className="button-icon">
-        <img src={HamBurgerIcon} alt="Menu" width="20px" />
+    <button className="icon-button">
+      <div className="button-icon-div">
+        {props.children === null ? props.alt : props.children}
       </div>
     </button>
   );
 };
 
-export { RCButton, RCButtonSecondary, IconButton };
+export { RCButton, RCSecondaryButton, IconButton };

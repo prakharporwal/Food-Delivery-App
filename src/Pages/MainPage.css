@@ -1,3 +1,4 @@
 .main-app {
-  color: red;
+  background-color: var(--app-color);
+  height: 100vh;
 }

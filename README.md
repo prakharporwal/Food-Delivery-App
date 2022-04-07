@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Food Delivery App Design
+
+- Hosted at [https://prakharporwal.github.io/Food-Delivery-App/]
 
 ### ABOUT package.json file
 
@@ -9,3 +11,7 @@
 ### Setting up with ESLINT and Prettier to maintain code linting
 
 - https://dev.to/knowankit/setup-eslint-and-prettier-in-react-app-357b
+
+### Copying this Design At Dribbble
+
+![Food Delivery App Design](https://dribbble.com/shots/15082603-Food-Delivery-Dashboard)

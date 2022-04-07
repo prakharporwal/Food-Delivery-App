@@ -1,33 +1,43 @@
-import { IconButton, RCButton, RCButtonSecondary } from "../Components/Button";
-import GIF from "../assets/icons8-hamburger-menu.gif";
+import { IconButton, RCButton, RCSecondaryButton } from "../Components/Button";
+import UserAvatar from "../assets/man.png";
+import HamBurgerIcon from "../assets/hamburger.png";
+
 import "./NavBar.css";
 const NavBar: React.FunctionComponent<any> = () => {
   return (
     <>
       <nav className="navbar">
-        <IconButton></IconButton>
+        <IconButton>
+          <img
+            className="sidebar-icon"
+            src={HamBurgerIcon}
+            alt="Side Bar"
+          ></img>
+        </IconButton>
         <span>Dashboard</span>
         <ul>
           <li>
-            <RCButtonSecondary>Home</RCButtonSecondary>
+            <RCSecondaryButton>Home</RCSecondaryButton>
           </li>
           <li>
-            <RCButtonSecondary>Dashboard</RCButtonSecondary>
+            <RCSecondaryButton>Dashboard</RCSecondaryButton>
           </li>
           <li>
-            <RCButtonSecondary>Orders</RCButtonSecondary>
+            <RCSecondaryButton>Orders</RCSecondaryButton>
           </li>
           <li>
-            <RCButtonSecondary>Settings</RCButtonSecondary>
+            <RCSecondaryButton>Settings</RCSecondaryButton>
           </li>
         </ul>
-        <div className="user-info">
-          <div>UserName</div>
-          <div>Designation</div>
-        </div>
-        <img src={GIF} alt="image" width="30px" />
+        <RCButton className="offers-button" title="Learn More" />
 
-        <RCButton title="Offers">Offers</RCButton>
+        <div>
+          <img className="user-avatar" src={UserAvatar} alt="Avatar" />
+        </div>
+        <div className="user-info">
+          <span className="username">Prakhar Porwal</span>
+          <span className="designation">Super Foodie</span>
+        </div>
       </nav>
     </>
   );

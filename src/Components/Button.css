@@ -1,10 +1,22 @@
 .rc-button {
-  border-radius: 8px;
-  padding: 8px;
+  border: 0.1rem solid var(--primary-button-color);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
   margin-top: 100px;
-  background-color: #1f1f2f;
-  color: whitesmoke;
-  margin: 0;
+  font-weight: 600;
+  min-width: 8rem;
+  /*TODO should we let button text wrap or not ?*/
+  /* white-space: nowrap; */
+  transition: 200ms all;
+
+  background: none;
+  color: var(--primary-button-color);
+}
+
+.rc-button:hover,
+.rc-button:focus {
+  background-color: var(--primary-button-color);
+  color: white;
 }
 
 .rc-button--secondary {
@@ -13,9 +25,21 @@
   color: grey;
   padding: 8px 10px;
   border-radius: 4px;
+  font-size: var(--title-font-size);
 }
 
 .rc-button--secondary:hover {
   background-color: #ededf0;
   color: black;
+}
+
+.icon-button {
+  display: inline-block;
+  background: none;
+  border: none;
+  margin: 0.5rem;
+}
+
+.icon-button .button-icon-div {
+  box-sizing: border-box;
 }
