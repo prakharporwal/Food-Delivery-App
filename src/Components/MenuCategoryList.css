@@ -1,4 +1,19 @@
+.menu-list-title {
+  margin: 0rem 1.5rem;
+  margin-top: 2rem;
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  /* border: 2px solid gold; */
+  text-align: left;
+  /* width: 12rem; */
+  /* display: unset; */
+}
+
 .menu-category-list {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
 }

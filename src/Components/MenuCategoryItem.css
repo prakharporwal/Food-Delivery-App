@@ -2,7 +2,7 @@
   background: white;
   margin: 1rem;
   padding: 0.2rem 0;
-  width: 8rem;
+  min-width: 8rem;
   height: 10rem;
   display: flex;
   border-radius: 1rem;
@@ -25,25 +25,11 @@
   text-transform: capitalize;
   font-weight: 500;
 }
-/* from https://stackoverflow.com/a/21717236
-    And Some Hit and try
-*/
-.menu-category-item .menu-item-icon-button-cropper {
-  background: var(--app-theme-color);
-  width: 1.9rem;
-  height: 1.8rem;
-  line-height: 2rem;
-  border-radius: 2rem;
-}
+
 .menu-category-item .menu-next-icon {
-  width: 0.8rem;
-  background-size: 30%;
-  margin: 0;
-  padding: 0;
-  display: block;
-  transform: translate(-0.3rem, -0.1rem);
   fill: white;
 }
+
 /*  ACTIVE ITEM CSS  */
 /*  
 NO NEED TO REWRITE ALL PROP 
@@ -54,7 +40,6 @@ JUST ADDITION NEEDED FOR ACTIVE CHANGE THEM
   background: var(--app-theme-color);
 }
 
-/* from https://stackoverflow.com/a/21717236*/
 .active-item .menu-item-icon-cropper {
   background: white;
 }
@@ -63,8 +48,9 @@ JUST ADDITION NEEDED FOR ACTIVE CHANGE THEM
   color: white;
 }
 
-.active-item .menu-item-icon-button-cropper {
+.active-item .icon-button {
   background: white;
+  border-color: white;
 }
 
 .active-item .menu-next-icon {
