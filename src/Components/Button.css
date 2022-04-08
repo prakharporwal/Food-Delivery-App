@@ -33,13 +33,20 @@
   color: black;
 }
 
+/* from https://stackoverflow.com/a/21717236
+    And Some Hit and try
+*/
 .icon-button {
-  display: inline-block;
-  background: none;
-  border: none;
+  border: 2px solid var(--app-theme-color);
   margin: 0.5rem;
+  background: var(--app-theme-color);
+  width: 1.9rem;
+  height: 1.8rem;
+  line-height: 2rem;
+  border-radius: 2rem;
 }
 
 .icon-button .button-icon-div {
-  box-sizing: border-box;
+  transform: translate(0, -0.1rem);
+  fill: white;
 }

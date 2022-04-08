@@ -6,6 +6,7 @@ import "./NavBar.css";
 const NavBar: React.FunctionComponent<any> = () => {
   return (
     <>
+      <span className="work-in-progress">Work In Progress</span>
       <nav className="navbar">
         <IconButton>
           <img
@@ -14,8 +15,10 @@ const NavBar: React.FunctionComponent<any> = () => {
             alt="Side Bar"
           ></img>
         </IconButton>
+
         <span>Dashboard</span>
-        <ul>
+
+        <ul className="navbar-menu">
           <li>
             <RCSecondaryButton>Home</RCSecondaryButton>
           </li>
@@ -28,12 +31,13 @@ const NavBar: React.FunctionComponent<any> = () => {
           <li>
             <RCSecondaryButton>Settings</RCSecondaryButton>
           </li>
+          <RCButton className="offers-button" title="Learn More" />
         </ul>
-        <RCButton className="offers-button" title="Learn More" />
 
         <div>
           <img className="user-avatar" src={UserAvatar} alt="Avatar" />
         </div>
+
         <div className="user-info">
           <span className="username">Prakhar Porwal</span>
           <span className="designation">Super Foodie</span>
