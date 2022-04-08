@@ -1,13 +1,13 @@
 * {
   --app-theme-color: rgb(248, 173, 12);
-  --app-color: rgb(221, 221, 221);
-  --app-color: whitesmoke;
+  --app-background-color: rgb(221, 221, 221);
+  --app-background-color: whitesmoke;
   --app-text-color: black;
   --primary-button-color: var(--app-theme-color);
   --secondary-button-color: blue;
   --title-font-size: 1.1rem;
-  --h1-font-size: 2rem;
-  --h2-font-size: 1.6rem;
+  --h1-font-size: 1.6rem;
+  --h2-font-size: 1.4rem;
   --h3-font-size: 1.2rem;
   --h4-font-size: 0.8rem;
   --button-font-size: 0.9rem;
