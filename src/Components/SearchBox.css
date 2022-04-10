@@ -31,3 +31,11 @@
 .search-icon:hover {
   background-color: grey;
 }
+
+@media only screen and (max-width: 728px) {
+  .search-box {
+    position: sticky;
+    overflow: hidden;
+    align-self: center;
+  }
+}

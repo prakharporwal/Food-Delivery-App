@@ -6,3 +6,12 @@
   overflow-y: hidden;
   white-space: nowrap;
 }
+
+@media only screen and (max-width: 728px) {
+  .food-item-list {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
+  }
+}

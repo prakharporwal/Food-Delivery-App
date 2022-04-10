@@ -2,12 +2,9 @@
   background-color: var(--app-background-color);
   height: 100%;
   margin-top: 2.5rem;
-  display: grid;
-  grid-template-columns: 2fr 6fr 3fr;
-}
-
-.sidebar {
-  background-color: greenyellow;
+  /* margin-left: 12rem; */
+  /* display: grid;
+  grid-template-columns: 2fr 6fr 3fr; */
 }
 
 .menu-page {
@@ -33,9 +30,11 @@ https://css-tricks.com/almanac/properties/s/scrollbar/
   /* outline: 1px solid slategrey; */
 }
 
-@media only screen and (width < 728px) {
+@media only screen and (max-width: 728px) {
   .app-area {
     display: flex;
     flex-direction: column;
+    margin-top: 0;
+    margin: 0;
   }
 }

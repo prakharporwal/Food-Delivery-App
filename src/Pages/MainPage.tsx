@@ -54,17 +54,17 @@ export default function MainPage() {
   return (
     <>
       <NavBar />
+      {/* <SideBar /> */}
       <div className="app-area">
-        <div className="sidebar">sidebar</div>
         <div className="menu-page">
           <SearchBox />
           <MenuCategoryList activeIndex={1} data={menuData}></MenuCategoryList>
           <FoodItemList foodData={foodData}></FoodItemList>
-          <FoodItemList foodData={foodData}></FoodItemList>
+          {/* <FoodItemList foodData={foodData}></FoodItemList> */}
           {/* <FoodItemList foodData={foodData}></FoodItemList> */}
           {/* <FoodItemList foodData={foodData}></FoodItemList> */}
         </div>
-        <div className="checkout-box">checkout</div>
+        {/* <div className="checkout-box">checkout</div> */}
       </div>
     </>
   );

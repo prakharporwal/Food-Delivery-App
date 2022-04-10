@@ -1,0 +1,33 @@
+.sidebar {
+  background-color: var(--app-theme-color);
+  /* display: flex; */
+  /* flex-direction: row; */
+  position: fixed;
+  top: 2.5rem;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.sidebar .nav-list {
+  border-radius: 16px;
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  /* border: 2px solid rgb(214, 135, 135); */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 12rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list > li {
+  margin: 0;
+  padding: 0;
+  border: 2px solid green;
+}
+
+.nav-list .nav-item {
+}

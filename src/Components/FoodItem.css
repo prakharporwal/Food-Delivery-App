@@ -5,10 +5,12 @@
   align-items: center;
   background-color: white;
   border-radius: 2rem;
-  min-width: 15rem;
+  min-width: 16rem;
+  width: 18rem;
   height: 13rem;
   margin: 7rem 1rem;
 }
+
 .food-item > * {
   transform: translate(0, -3rem);
 }
@@ -42,4 +44,7 @@
 }
 .food-item .icon-button {
   /* transform: translate(0, -5O); */
+}
+.plus-icon {
+  fill: whitesmoke;
 }

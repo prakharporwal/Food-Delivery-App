@@ -47,6 +47,6 @@
 }
 
 .icon-button .button-icon-div {
-  transform: translate(0, -0.1rem);
+  transform: translate(0.01em, -0.2em);
   fill: white;
 }

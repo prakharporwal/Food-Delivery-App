@@ -1,46 +1,58 @@
-import { IconButton, RCButton, RCSecondaryButton } from "../Components/Button";
+import { useState } from "react";
+import { RCButton, RCSecondaryButton } from "../Components/Button";
 import UserAvatar from "../assets/man.png";
 import HamBurgerIcon from "../assets/hamburger.png";
 
 import "./NavBar.css";
+
 const NavBar: React.FunctionComponent<any> = () => {
+  let [activeClass, setActiveClass] = useState(false);
+
   return (
     <>
       <span className="work-in-progress">Work In Progress</span>
-      <nav className="navbar">
-        <IconButton>
+      <nav className={`navbar ${activeClass ? "active" : ""}`}>
+        {/* <IconButton> */}
+        <button
+          className="hamburger-menu-toggle"
+          onClick={() => {
+            setActiveClass(!activeClass);
+          }}
+        >
           <img
             className="sidebar-icon"
             src={HamBurgerIcon}
             alt="Side Bar"
           ></img>
-        </IconButton>
+        </button>
+        {/* </IconButton> */}
 
-        <span>Dashboard</span>
+        {/* <span>Dashboard</span> */}
 
         <ul className="navbar-menu">
-          <li>
+          <li className="nav-item">
             <RCSecondaryButton>Home</RCSecondaryButton>
           </li>
-          <li>
+          <li className="nav-item">
             <RCSecondaryButton>Dashboard</RCSecondaryButton>
           </li>
-          <li>
+          <li className="nav-item">
             <RCSecondaryButton>Orders</RCSecondaryButton>
           </li>
-          <li>
+          <li className="nav-item">
             <RCSecondaryButton>Settings</RCSecondaryButton>
           </li>
           <RCButton className="offers-button" title="Learn More" />
         </ul>
 
-        <div>
-          <img className="user-avatar" src={UserAvatar} alt="Avatar" />
-        </div>
-
         <div className="user-info">
-          <span className="username">Prakhar Porwal</span>
-          <span className="designation">Super Foodie</span>
+          <div>
+            <img className="user-avatar" src={UserAvatar} alt="Avatar" />
+          </div>
+          <div className="username">
+            <span>Prakhar Porwal</span>
+            <span className="designation">Premium</span>
+          </div>
         </div>
       </nav>
     </>

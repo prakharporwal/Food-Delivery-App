@@ -7,7 +7,7 @@ interface RCButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
 
-const RCButton: React.FunctionComponent<any> = (props: RCButtonProps) => {
+const RCButton: React.FunctionComponent<RCButtonProps> = (props) => {
   return (
     <button
       title={props.title}
