@@ -10,6 +10,7 @@ A React App TypeScript
 
 #### Features :
 
+
 - [ ] Responsive for mobile screen
 - [ ] Theming using CSS variables like Orange
 - [ ] Functional With State Change
