@@ -1,0 +1,142 @@
+.navbar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0px 0.1rem 0.1rem grey;
+  background-color: white;
+  transition: 300ms all;
+}
+
+.navbar .hamburger-menu-toggle {
+  border: none;
+  background-color: white;
+  display: grid;
+  align-self: center;
+  padding: 4px 8px;
+  outline: 0;
+}
+
+.navbar:last-child {
+  margin-right: 0;
+}
+
+.navbar .navbar-menu {
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.work-in-progress {
+  position: fixed;
+  left: 50%;
+  /* width: 100vw; */
+  z-index: 1100;
+  top: 2.5rem;
+  color: red;
+}
+
+.navbar .user-info {
+  display: flex;
+  margin-right: 1rem;
+  margin-left: auto;
+}
+
+.navbar .user-info .username {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: auto;
+  white-space: nowrap;
+  font-size: var(--button-font-size);
+  text-transform: uppercase;
+}
+
+.username .designation {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.user-info .user-avatar {
+  width: 2.4rem;
+  margin: 0.5rem;
+}
+
+.offers-button {
+  margin: 0 1rem;
+}
+
+.navbar .sidebar-icon {
+  padding-top: 0;
+  width: 1.5rem;
+  height: 2rem;
+}
+
+/* @media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+} */
+
+@media only screen and (max-width: 728px) {
+  .navbar {
+    /* position: fixed; */
+    flex-direction: column;
+    align-items: center;
+    height: 3rem;
+    /* height: 100vh; */
+    width: 10%;
+  }
+  .navbar.active {
+    width: 60%;
+    height: 100vh;
+  }
+
+  .navbar .hamburger-menu-toggle {
+    outline: 0;
+  }
+
+  .navbar .user-info {
+    display: none;
+    margin-right: 1rem;
+    margin-left: auto;
+  }
+
+  .navbar.active .user-info {
+    display: flex;
+    margin-right: 1rem;
+    margin-left: auto;
+  }
+  /* .navbar:active > expanded,
+  .navbar:focus {
+    height: auto;
+  } */
+
+  .navbar .navbar-menu {
+    flex-direction: column;
+    height: 70vh;
+    display: none;
+  }
+
+  .navbar.active .navbar-menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .work-in-progress {
+    display: none;
+  }
+}

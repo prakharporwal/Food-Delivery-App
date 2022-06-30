@@ -1,0 +1,52 @@
+.rc-button {
+  border: 0.1rem solid var(--primary-button-color);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  margin-top: 100px;
+  font-weight: 600;
+  min-width: 8rem;
+  /*TODO should we let button text wrap or not ?*/
+  /* white-space: nowrap; */
+  transition: 200ms all;
+
+  background: none;
+  color: var(--primary-button-color);
+}
+
+.rc-button:hover,
+.rc-button:focus {
+  background-color: var(--primary-button-color);
+  color: white;
+}
+
+.rc-button--secondary {
+  background: none;
+  border: none;
+  color: grey;
+  padding: 8px 10px;
+  border-radius: 4px;
+  font-size: var(--title-font-size);
+}
+
+.rc-button--secondary:hover {
+  background-color: #ededf0;
+  color: black;
+}
+
+/* from https://stackoverflow.com/a/21717236
+    And Some Hit and try
+*/
+.icon-button {
+  border: 2px solid var(--app-theme-color);
+  margin: 0.5rem;
+  background: var(--app-theme-color);
+  width: 1.9rem;
+  height: 1.8rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+}
+
+.icon-button .button-icon-div {
+  transform: translate(0.01em, -0.2em);
+  fill: white;
+}

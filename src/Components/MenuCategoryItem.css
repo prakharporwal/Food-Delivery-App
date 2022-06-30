@@ -1,0 +1,58 @@
+.menu-category-item {
+  background: white;
+  margin: 1rem;
+  padding: 0.2rem 0;
+  min-width: 8rem;
+  height: 10rem;
+  display: flex;
+  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.menu-category-item .menu-item-icon-cropper {
+  width: 3rem;
+  height: 3.1rem;
+  line-height: 3.1rem;
+  border-radius: 3.1rem;
+}
+.menu-category-item .menu-item-icon {
+  padding: 0.5rem;
+  width: 2rem;
+}
+
+.menu-category-item .menu-item-title {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.menu-category-item .menu-next-icon {
+  fill: white;
+}
+
+/*  ACTIVE ITEM CSS  */
+/*  
+NO NEED TO REWRITE ALL PROP 
+JUST ADDITION NEEDED FOR ACTIVE CHANGE THEM
+*/
+
+.active-item {
+  background: var(--app-theme-color);
+}
+
+.active-item .menu-item-icon-cropper {
+  background: white;
+}
+
+.active-item .menu-item-title {
+  color: white;
+}
+
+.active-item .icon-button {
+  background: white;
+  border-color: white;
+}
+
+.active-item .menu-next-icon {
+  fill: var(--app-theme-color);
+}
