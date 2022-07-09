@@ -2,7 +2,7 @@
   "name": "food-delivery-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://prakharporwal.github.io/Food-Delivery-App",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
