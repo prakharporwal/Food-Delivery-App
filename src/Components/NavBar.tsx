@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { RCButton, RCSecondaryButton } from "../Components/Button";
 import UserAvatar from "../assets/man.png";
-import HamBurgerIcon from "../assets/hamburger.png";
+import { MdMenu } from "react-icons/md";
 
 import "./NavBar.css";
 
@@ -19,11 +19,12 @@ const NavBar: React.FunctionComponent<any> = () => {
             setActiveClass(!activeClass);
           }}
         >
-          <img
+          {/* <img
             className="sidebar-icon"
             src={HamBurgerIcon}
             alt="Side Bar"
-          ></img>
+          ></img> */}
+          <MdMenu />
         </button>
         {/* </IconButton> */}
 

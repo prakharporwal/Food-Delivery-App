@@ -53,7 +53,7 @@ export default function MainPage() {
 
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       {/* <SideBar /> */}
       <div className="app-area">
         <div className="menu-page">

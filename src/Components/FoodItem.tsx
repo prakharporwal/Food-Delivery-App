@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton } from "./Button";
-import { ReactComponent as PlusIconSvg } from "../assets/svg/plus-symbol.svg";
+import { FaPlus } from "react-icons/fa";
 import "./FoodItem.css";
 
 export type FoodItemProps = {
@@ -21,11 +21,11 @@ const FoodItem: React.FunctionComponent<FoodItemProps> = (props) => {
         <span className="food-price-currency">$</span>
         <span className="food-price">{props.price}</span>
       </div>
-
-      <IconButton alt={"Add To Cart"}>
-        <PlusIconSvg />
-        {/* </div> */}
-      </IconButton>
+      <div className="food-item-icon-button-cropper">
+        <IconButton alt={"Add To Cart"}>
+          <FaPlus />
+        </IconButton>
+      </div>
     </div>
   );
 };

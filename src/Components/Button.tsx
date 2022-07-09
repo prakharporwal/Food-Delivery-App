@@ -37,9 +37,7 @@ interface IconButtonProps {
 const IconButton: React.FunctionComponent<IconButtonProps> = (props) => {
   return (
     <button className="icon-button">
-      <div className="button-icon-div">
-        {props.children === null ? props.alt : props.children}
-      </div>
+      {props.children === null ? props.alt : props.children}
     </button>
   );
 };

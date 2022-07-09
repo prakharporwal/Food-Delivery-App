@@ -40,13 +40,11 @@
   border: 2px solid var(--app-theme-color);
   margin: 0.5rem;
   background: var(--app-theme-color);
+  display: grid;
+  place-items: center;
+  /* for making circular button */
   width: 1.9rem;
   height: 1.8rem;
   line-height: 2rem;
   border-radius: 2rem;
-}
-
-.icon-button .button-icon-div {
-  transform: translate(0.01em, -0.2em);
-  fill: white;
 }

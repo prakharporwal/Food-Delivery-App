@@ -1,6 +1,6 @@
 import React from "react";
 import { IconButton } from "./Button";
-import { ReactComponent as RightArrowIcon } from "../assets/svg/right-arrow.svg";
+import { FaAngleRight } from "react-icons/fa";
 import "./MenuCategoryItem.css";
 
 export type MenuCategoryItemProps = {
@@ -20,9 +20,7 @@ const MenuCategoryItem: React.FunctionComponent<MenuCategoryItemProps> = (
       <span className="menu-item-title">{props.title}</span>
       <div className="menu-item-icon-button-cropper">
         <IconButton alt={"Next"}>
-          <div className="menu-next-icon">
-            <RightArrowIcon></RightArrowIcon>
-          </div>
+          <FaAngleRight color="black"></FaAngleRight>
         </IconButton>
       </div>
     </div>
