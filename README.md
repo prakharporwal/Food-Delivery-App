@@ -6,10 +6,9 @@ A React App TypeScript
 
 ### Copying this Design At Dribbble
 
-![Food Delivery App Design](https://cdn.dribbble.com/users/3993860/screenshots/15082603/media/45fcddb997b63623c940600391d40e69.png)
+![Food Delivery App Design](design.jpeg)
 
 #### Features :
-
 
 - [ ] Responsive for mobile screen
 - [ ] Theming using CSS variables like Orange
