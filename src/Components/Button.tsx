@@ -21,22 +21,32 @@ const RCButton: React.FunctionComponent<RCButtonProps> = (props) => {
 
 interface RCSecondaryButtonProps {
   title?: string;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
   children: any;
 }
 
 const RCSecondaryButton: React.FunctionComponent<RCSecondaryButtonProps> = (
   props
 ) => {
-  return <button className="rc-button--secondary">{props.children}</button>;
+  return (
+    <button
+      className={`rc-button--secondary ${props.className}`}
+      onClick={props.onClick}
+    >
+      {props.children}
+    </button>
+  );
 };
 
 interface IconButtonProps {
   alt?: string;
+  onClick?: any;
 }
 
 const IconButton: React.FunctionComponent<IconButtonProps> = (props) => {
   return (
-    <button className="icon-button">
+    <button className="icon-button" onClick={props.onClick}>
       {props.children === null ? props.alt : props.children}
     </button>
   );

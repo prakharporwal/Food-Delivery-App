@@ -1,7 +1,7 @@
 .app-area {
   background-color: var(--app-background-color);
   height: 100%;
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
   /* margin-left: 12rem; */
   /* display: grid;
   grid-template-columns: 2fr 6fr 3fr; */
@@ -11,9 +11,16 @@
   display: flex;
   flex-direction: column;
 }
-.checkout-box {
-  background-color: red;
-}
+/* .checkout-box {
+  background-color: var(--app-background-color);
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 2.5rem;
+  right: 0;
+  padding: 8px;
+  border-radius: 16px;
+} */
 /* 
 SCROLLBAR CSS
 https://css-tricks.com/almanac/properties/s/scrollbar/

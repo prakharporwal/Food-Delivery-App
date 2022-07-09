@@ -1,3 +1,6 @@
+import React, { useContext, createContext, useState } from "react";
+import { CartListContext } from "../Components/CartListContext";
+import { CheckoutBox, CartItem } from "../Components/CheckoutBox";
 import { FoodItemProps } from "../Components/FoodItem";
 import { FoodItemList } from "../Components/FoodItemList";
 import { MenuCategoryItemProps } from "../Components/MenuCategoryItem";
@@ -30,6 +33,27 @@ export default function MainPage() {
     },
   ];
 
+  let checkoutList: CartItem[] = [
+    {
+      itemName: "HotDog",
+      quantity: 2,
+      price: 30,
+      imgUrl: "",
+    },
+    {
+      itemName: "Cheese Burger",
+      quantity: 2,
+      price: 30,
+      imgUrl: "",
+    },
+    {
+      itemName: "Cheese Burger with Cola",
+      quantity: 2,
+      price: 30,
+      imgUrl: "",
+    },
+  ];
+
   const foodData: FoodItemProps[] = [
     {
       imgSrc: "food/pizza/crispy-mixed-pizza-with-olives-sausage.jpg",
@@ -38,7 +62,7 @@ export default function MainPage() {
       price: 7.49,
     },
     {
-      imgSrc: "food/pizza/crispy-mixed-pizza-with-olives-sausage.jpg",
+      imgSrc: "food/pizza/mushroom.png",
       title: "Sausage pizza with olives",
       rating: 3.8,
       price: 10.59,
@@ -51,8 +75,33 @@ export default function MainPage() {
     },
   ];
 
+  const [cartList, setCartList] = useState(checkoutList);
+  const CartListProvider = useContext(CartListContext);
+
+  const addToList = (item: CartItem) => {
+    let newProducts: CartItem[] = cartList;
+    newProducts.push(item);
+    setCartList(newProducts);
+  };
+
+  const removeFromCart = (item: CartItem) => {
+    let updatedCart: CartItem[] = cartList;
+
+    let index = cartList.indexOf(item);
+    if (index > -1) {
+      updatedCart.splice(index, 1);
+    }
+    setCartList(updatedCart);
+  };
+
   return (
-    <>
+    <CartListContext.Provider
+      value={{
+        cartList: cartList,
+        addToCart: addToList,
+        removeFromCart: removeFromCart,
+      }}
+    >
       <NavBar />
       {/* <SideBar /> */}
       <div className="app-area">
@@ -60,12 +109,14 @@ export default function MainPage() {
           <SearchBox />
           <MenuCategoryList activeIndex={1} data={menuData}></MenuCategoryList>
           <FoodItemList foodData={foodData}></FoodItemList>
-          {/* <FoodItemList foodData={foodData}></FoodItemList> */}
-          {/* <FoodItemList foodData={foodData}></FoodItemList> */}
-          {/* <FoodItemList foodData={foodData}></FoodItemList> */}
+          <FoodItemList foodData={foodData}></FoodItemList>
+          <FoodItemList foodData={foodData}></FoodItemList>
+          <FoodItemList foodData={foodData}></FoodItemList>
         </div>
-        {/* <div className="checkout-box">checkout</div> */}
+        <div className="checkout-box">
+          <CheckoutBox cartList={cartList} />
+        </div>
       </div>
-    </>
+    </CartListContext.Provider>
   );
 }

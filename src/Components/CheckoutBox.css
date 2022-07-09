@@ -1,0 +1,73 @@
+.checkout {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 2.5rem;
+  right: 0;
+  padding: 8px;
+  border-radius: 16px;
+  height: 100vh;
+}
+
+.checkout .nav-list {
+  border-radius: 16px;
+  list-style: none;
+  /* border: 2px solid rgb(214, 135, 135); */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 15rem;
+  margin: 1rem 0rem;
+  padding: 0;
+}
+
+.credit-card {
+  display: flex;
+  gap: 10px;
+}
+.credit-card img {
+  height: 2rem;
+  width: 2.4rem;
+}
+
+.list-heading {
+  position: relative;
+  left: -40%;
+  font-weight: 500;
+}
+.nav-list .list-item {
+  margin: 4px;
+  padding: 4px 8px;
+  border: 2px solid rgb(216, 217, 218);
+  border-radius: 16px;
+  width: 90%;
+}
+
+.nav-list .list-item .cart-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.cart-item span:last-child {
+  margin-left: auto;
+  padding: 4px;
+}
+
+.cart-item .item-name {
+  width: 8rem;
+  word-wrap: break-word;
+}
+
+.checkout .total-amount-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout .total-amount-div span {
+  padding: 4px 8px;
+}

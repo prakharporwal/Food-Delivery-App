@@ -10,7 +10,7 @@ const NavBar: React.FunctionComponent<any> = () => {
 
   return (
     <>
-      <span className="work-in-progress">Work In Progress</span>
+      {/* <span className="work-in-progress">Work In Progress</span> */}
       <nav className={`navbar ${activeClass ? "active" : ""}`}>
         {/* <IconButton> */}
         <button
