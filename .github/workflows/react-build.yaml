@@ -10,15 +10,31 @@ on:
 jobs:
   react-build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
-      - uses : actions/checkout@v3
+      
+      - name : Checkout Repository
+        uses : actions/checkout@v3
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: npm install
+
       - name: Build React app
         run:  npm run predeploy
       - name: Deploy the React App
         run: npm run deploy
+        
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
