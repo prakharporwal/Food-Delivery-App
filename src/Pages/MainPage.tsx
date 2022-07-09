@@ -1,4 +1,4 @@
-import React, { useContext, createContext, useState } from "react";
+import { useContext, useState } from "react";
 import { CartListContext } from "../Components/CartListContext";
 import { CheckoutBox, CartItem } from "../Components/CheckoutBox";
 import { FoodItemProps } from "../Components/FoodItem";
@@ -76,7 +76,6 @@ export default function MainPage() {
   ];
 
   const [cartList, setCartList] = useState(checkoutList);
-  const CartListProvider = useContext(CartListContext);
 
   const addToList = (item: CartItem) => {
     let newProducts: CartItem[] = cartList;

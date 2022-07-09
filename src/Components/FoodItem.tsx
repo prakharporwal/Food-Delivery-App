@@ -2,7 +2,7 @@ import React from "react";
 import { IconButton } from "./Button";
 import { FaPlus } from "react-icons/fa";
 import "./FoodItem.css";
-import { CartListContext, useCart } from "./CartListContext";
+import { useCart } from "./CartListContext";
 import { CartItem } from "./CheckoutBox";
 
 export type FoodItemProps = {

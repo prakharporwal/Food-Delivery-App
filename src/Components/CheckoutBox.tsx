@@ -1,4 +1,4 @@
-import React, { ReactNode, useCallback, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { IconButton, RCSecondaryButton } from "./Button";
 import { useCart } from "./CartListContext";
 import { SiFoodpanda } from "react-icons/si";
